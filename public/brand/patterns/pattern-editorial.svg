@@ -1,0 +1,21 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="editorial-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E8D9CC" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+    <radialGradient id="editorial-fade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E85D04" stop-opacity="0.04"/>
+      <stop offset="60%" stop-color="#E85D04" stop-opacity="0.01"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#editorial-grid)" />
+  <rect width="400" height="400" fill="url(#editorial-fade)" />
+  <!-- Cropped brand symbol geometry watermark -->
+  <g opacity="0.045" transform="translate(180, 160) scale(3.5)">
+    <path d="M16 38L27 24L32 28.5L21 42H16V38Z" fill="#2B211C" />
+    <path d="M25 42L37 19L43.5 23.5L31.5 46H25V42Z" fill="#E85D04" />
+    <path d="M45 13.5L50.5 7.5L56 13.5L50.5 19.5L45 13.5Z" fill="#E85D04" />
+    <path d="M16 47H46" stroke="#2B211C" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+</svg>

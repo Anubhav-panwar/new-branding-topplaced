@@ -1,0 +1,32 @@
+<svg width="280" height="180" viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rubric-radar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E85D04" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F28C45" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Radar Grid -->
+  <polygon points="140,24 216,90 140,156 64,90" stroke="#E8D9CC" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+  <polygon points="140,46 191,90 140,134 89,90" stroke="#E8D9CC" stroke-width="1" fill="none"/>
+  <polygon points="140,68 166,90 140,112 114,90" stroke="#E8D9CC" stroke-width="1" fill="none"/>
+
+  <!-- Axes -->
+  <line x1="140" y1="20" x2="140" y2="160" stroke="#E8D9CC" stroke-width="1"/>
+  <line x1="60" y1="90" x2="220" y2="90" stroke="#E8D9CC" stroke-width="1"/>
+
+  <!-- Candidate STAR Polygon -->
+  <polygon points="140,32 208,82 140,146 76,96" fill="url(#rubric-radar)" stroke="#E85D04" stroke-width="2"/>
+
+  <!-- Dimension Nodes -->
+  <circle cx="140" cy="32" r="4" fill="#E85D04" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="208" cy="82" r="4" fill="#E85D04" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="140" cy="146" r="4" fill="#E85D04" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="76" cy="96" r="4" fill="#E85D04" stroke="#FFFFFF" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <text x="140" y="16" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="9" font-weight="700" fill="#2B211C">SITUATION (9.4)</text>
+  <text x="230" y="93" text-anchor="start" font-family="Public Sans, sans-serif" font-size="9" font-weight="700" fill="#2B211C">TASK (8.9)</text>
+  <text x="140" y="172" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="9" font-weight="700" fill="#E85D04">ACTION (9.6)</text>
+  <text x="50" y="93" text-anchor="end" font-family="Public Sans, sans-serif" font-size="9" font-weight="700" fill="#2B211C">RESULT (9.1)</text>
+</svg>

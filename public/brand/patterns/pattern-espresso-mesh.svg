@@ -1,0 +1,26 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="espresso-glow" cx="85%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#E85D04" stop-opacity="0.28"/>
+      <stop offset="40%" stop-color="#B94308" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#2B211C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="espresso-top-glow" cx="15%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#F28C45" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#2B211C" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="espresso-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="0.8" fill="#FFFFFF" fill-opacity="0.07" />
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="#2B211C"/>
+  <rect width="800" height="500" fill="url(#espresso-grid)"/>
+  <rect width="800" height="500" fill="url(#espresso-glow)"/>
+  <rect width="800" height="500" fill="url(#espresso-top-glow)"/>
+  <!-- Bold ascending shard line derived from brand symbol -->
+  <path d="M120 480 L 320 180 L 360 210 L 180 500 Z" fill="#E85D04" fill-opacity="0.035" />
+  <path d="M280 500 L 520 120 L 570 155 L 340 520 Z" fill="#FFFFFF" fill-opacity="0.025" />
+  <g opacity="0.07" transform="translate(620, 70) scale(2.2)">
+    <path d="M45 13.5L50.5 7.5L56 13.5L50.5 19.5L45 13.5Z" fill="#F28C45" />
+  </g>
+</svg>

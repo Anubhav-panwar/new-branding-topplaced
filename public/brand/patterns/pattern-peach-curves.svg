@@ -1,0 +1,23 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="peach-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="45%" stop-color="#FDF3E7"/>
+      <stop offset="100%" stop-color="#F9E6D4"/>
+    </linearGradient>
+    <radialGradient id="peach-sun" cx="80%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#F28C45" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#E85D04" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F9E6D4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#peach-grad)" />
+  <rect width="600" height="400" fill="url(#peach-sun)" />
+  <!-- Gentle organic brand curves -->
+  <path d="M-50 320 C 150 240, 300 380, 650 210" stroke="#E85D04" stroke-opacity="0.09" stroke-width="32" fill="none" stroke-linecap="round"/>
+  <path d="M-80 370 C 180 290, 360 420, 680 270" stroke="#F28C45" stroke-opacity="0.06" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <!-- Decorative brand diamond accent -->
+  <g opacity="0.08" transform="translate(480, 50) rotate(15) scale(1.6)">
+    <path d="M45 13.5L50.5 7.5L56 13.5L50.5 19.5L45 13.5Z" fill="#E85D04" />
+  </g>
+</svg>

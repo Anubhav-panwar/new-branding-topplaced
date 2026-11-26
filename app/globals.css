@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base HSL Mappings for Shadcn/Tailwind Compatibility */
+    --background: 38 100% 99%;        /* #FFFCF8 Warm Ivory */
+    --foreground: 22 21% 14%;          /* #2B211C Espresso */
+    --card: 0 0% 100%;                 /* #FFFFFF Pure White */
+    --card-foreground: 22 21% 14%;     /* #2B211C */
+    --popover: 0 0% 100%;
+    --popover-foreground: 22 21% 14%;
+    --primary: 24 96% 46%;             /* #E85D04 Primary Brand */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 27 75% 91%;           /* #F9E6D4 Soft Peach */
+    --secondary-foreground: 24 88% 38%;/* #B94308 Deep Orange */
+    --muted: 26 36% 86%;               /* #E8D9CC Muted Sand */
+    --muted-foreground: 23 10% 40%;    /* #70645C Secondary Text */
+    --accent: 25 86% 61%;              /* #F28C45 Soft Orange */
+    --accent-foreground: 22 21% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 26 36% 88%;              /* Subtle sand border */
+    --input: 26 36% 88%;
+    --ring: 24 96% 46%;
+    --radius: 0.875rem;
+
+    /* Raw Hex Brand Tokens */
+    --brand-primary: #E85D04;
+    --brand-deep: #B94308;
+    --brand-soft: #F28C45;
+    --brand-espresso: #2B211C;
+    --brand-ivory: #FFFCF8;
+    --brand-peach: #F9E6D4;
+    --brand-sand: #E8D9CC;
+    --brand-white: #FFFFFF;
+    --brand-secondary: #70645C;
+  }
+}
+
+/* =========================================================
+   TOPPLACED TYPOGRAPHY TOKENS
+   ========================================================= */
+
+.font-display {
+  font-family: 'Bricolage Grotesque', 'Public Sans', system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-sans {
+  font-family: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Fluid responsive typography classes */
+.text-display-hero {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #2B211C;
+}
+
+.text-display-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #2B211C;
+}
+
+.text-display-section {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: #2B211C;
+}
+
+.text-display-card {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #2B211C;
+}
+
+.text-lead {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.1875rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #70645C;
+}
+
+.text-body-subtle {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #70645C;
+}
+
+/* =========================================================
+   GLOBAL RESET & SMOOTH RENDERING
+   ========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #FFFCF8;
+  color: #2B211C;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #E85D04;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(232, 93, 4, 0.18);
+  color: #2B211C;
+}
+
+/* =========================================================
+   FULL-WIDTH RESPONSIVE LAYOUT ENGINE (32-64px Desktop / 16-24px Mobile)
+   ========================================================= */
+
+@layer components {
+  /* Full-width responsive container without narrow artificial limits */
+  .section-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;  /* 20px on mobile */
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 1.75rem; /* 28px */
+      padding-right: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-left: 2.5rem;  /* 40px */
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-container {
+      padding-left: 3.5rem;  /* 56px */
+      padding-right: 3.5rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .section-container {
+      padding-left: 4.5rem;  /* 72px */
+      padding-right: 4.5rem;
+    }
+  }
+
+  /* Reading width constraint specifically for long text */
+  .prose-reading {
+    max-width: 44rem; /* ~70ch for optimum readability */
+  }
+
+  /* Subtle Warm Dot Grid Background */
+  .bg-warm-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(43, 33, 28, 0.06) 1px, transparent 0);
+    background-size: 2.5rem 2.5rem;
+  }
+
+  /* Brand Gradient Text */
+  .gradient-brand-text {
+    background: linear-gradient(135deg, #B94308 0%, #E85D04 50%, #F28C45 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Espresso Contrast Panel */
+  .surface-espresso {
+    background-color: #2B211C;
+    color: #FFFCF8;
+    border: 1px solid rgba(232, 217, 204, 0.12);
+  }
+
+  /* Pure White Elevated Surface Card */
+  .surface-card-clean {
+    background-color: #FFFFFF;
+    border: 1px solid #E8D9CC;
+    border-radius: 1.25rem;
+    box-shadow: 0 1px 3px rgba(43, 33, 28, 0.04), 0 8px 24px -4px rgba(43, 33, 28, 0.04);
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.2s ease;
+  }
+
+  .surface-card-clean:hover {
+    transform: translateY(-2px);
+    border-color: #F28C45;
+    box-shadow: 0 8px 30px -4px rgba(43, 33, 28, 0.08), 0 16px 32px -8px rgba(232, 93, 4, 0.1);
+  }
+
+  /* Premium Primary Action Button */
+  .btn-brand-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.625rem 1.35rem;
+    border-radius: 0.875rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #E85D04 0%, #B94308 100%);
+    box-shadow: 0 4px 14px rgba(232, 93, 4, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(185, 67, 8, 0.8);
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.2s ease;
+  }
+
+  .btn-brand-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #F28C45 0%, #E85D04 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(232, 93, 4, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-brand-primary:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  .btn-brand-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* Premium Secondary Button */
+  .btn-brand-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.875rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #2B211C;
+    background-color: #FFFFFF;
+    border: 1px solid #E8D9CC;
+    box-shadow: 0 1px 2px rgba(43, 33, 28, 0.05);
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-brand-secondary:hover:not(:disabled) {
+    background-color: #FFF9F2;
+    border-color: #F28C45;
+    color: #B94308;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(43, 33, 28, 0.06);
+  }
+
+  .btn-brand-secondary:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  /* Badge Pill */
+  .badge-brand-subtle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background-color: #F9E6D4;
+    color: #B94308;
+    border: 1px solid rgba(232, 93, 4, 0.22);
+  }
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFCF8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8D9CC;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E85D04;
+}
+
+/* Media element safety */
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   BRAND SHADOW UTILITIES
+   ========================================================= */
+
+.shadow-brand-glow {
+  box-shadow: 0 4px 18px rgba(232, 93, 4, 0.35);
+}
+
+.shadow-brand-glow-lg {
+  box-shadow: 0 8px 28px rgba(232, 93, 4, 0.48);
+}
+
+.shadow-card-subtle {
+  box-shadow: 0 1px 3px rgba(43, 33, 28, 0.04), 0 6px 18px -4px rgba(43, 33, 28, 0.06);
+}
+
+.shadow-card-elevated {
+  box-shadow: 0 2px 6px rgba(43, 33, 28, 0.04), 0 12px 32px -6px rgba(43, 33, 28, 0.08), 0 24px 48px -12px rgba(232, 93, 4, 0.06);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 8px 30px -4px rgba(43, 33, 28, 0.08), 0 18px 40px -8px rgba(232, 93, 4, 0.12);
+}
+
+/* =========================================================
+   ANIMATION UTILITIES
+   ========================================================= */
+
+@keyframes barFill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.animate-bar-fill {
+  transform-origin: left;
+  animation: barFill 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bar-fill,
+  .animate-fade-slide-up {
+    animation: none !important;
+    transform: none !important;
+  }
+}
